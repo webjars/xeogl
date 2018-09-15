@@ -13,7 +13,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>xeogl</artifactId>
-    <version>0.10-SNAPSHOT</version>
+    <version>0.9-SNAPSHOT</version>
     <name>xeogl</name>
     <description>WebJar for xeogl
     </description>
