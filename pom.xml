@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -13,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>xeogl</artifactId>
-    <version>0.9-SNAPSHOT</version>
+    <version>0.9</version>
     <name>xeogl</name>
     <description>WebJar for xeogl
     </description>
@@ -53,7 +51,7 @@
         <url>http://github.com/webjars/xeogl</url>
         <connection>scm:git:https://github.com/webjars/xeogl.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/xeogl.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>xeogl-0.9</tag>
     </scm>
 
     <build>
@@ -82,13 +80,13 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <echo message="download archive"/>
-                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip"/>
-                                <echo message="unzip archive"/>
-                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
-                                <echo message="moving resources"/>
+                                <echo message="download archive" />
+                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip" />
+                                <echo message="unzip archive" />
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
+                                <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/${project.artifactId}-${version.unsnapshot}/build"/>
+                                    <fileset dir="${project.build.directory}/${project.artifactId}-${version.unsnapshot}/build" />
                                 </move>
                             </target>
                         </configuration>
